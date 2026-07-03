@@ -1,0 +1,105 @@
+{
+  "entities": {
+    "Setting": {
+      "title": "Setting",
+      "description": "App-wide portal settings",
+      "type": "object",
+      "properties": {
+        "homeWelcomeTitle": { "type": "string" },
+        "homeWelcomeDesc": { "type": "string" },
+        "gatekeeperLetter": { "type": "string" },
+        "adminPassword": { "type": "string" }
+      }
+    },
+    "Question": {
+      "title": "Question",
+      "description": "Mind coordinate diagnostic question",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "text": { "type": "string" },
+        "score": { "type": "object" }
+      }
+    },
+    "Quiz": {
+      "title": "Quiz",
+      "description": "Psychology OX or multi-choice quiz",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "question": { "type": "string" },
+        "options": { "type": "array" },
+        "answer": { "type": "number" },
+        "explanation": { "type": "string" }
+      }
+    },
+    "Quote": {
+      "title": "Quote",
+      "description": "Healing daily quotes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "text": { "type": "string" },
+        "author": { "type": "string" }
+      }
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Self-care articles and posts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "CounselingRequest": {
+      "title": "CounselingRequest",
+      "description": "Students' 1:1 counseling request",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentName": { "type": "string" },
+        "department": { "type": "string" },
+        "studentId": { "type": "string" },
+        "contact": { "type": "string" },
+        "method": { "type": "string" },
+        "preferredDate": { "type": "string" },
+        "preferredTime": { "type": "string" },
+        "testName": { "type": "string" },
+        "testResultSummary": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "Global settings for Mind Portal"
+    },
+    "/questions/{questionId}": {
+      "schema": "Question",
+      "description": "Mind Coordinate questions"
+    },
+    "/quizzes/{quizId}": {
+      "schema": "Quiz",
+      "description": "OX & Psychology quizzes"
+    },
+    "/quotes/{quoteId}": {
+      "schema": "Quote",
+      "description": "Healing quotes"
+    },
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Self-care articles"
+    },
+    "/counseling_requests/{requestId}": {
+      "schema": "CounselingRequest",
+      "description": "Submitted counseling requests"
+    }
+  }
+}

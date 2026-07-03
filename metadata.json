@@ -1,0 +1,8 @@
+{
+  "name": "Remix: 마음 포털 (Mind Portal)",
+  "description": "현재 마음의 좌표(우울, 불안, 불면, 스트레스)를 스캔하여 안전하고 편안한 다음 목적지로 향하도록 인도하는 가상 환승 포털 공간입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
